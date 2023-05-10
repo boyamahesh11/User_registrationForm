@@ -1,0 +1,40 @@
+{% extends 'dummy.html' %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body
+        {
+            background-color: black;
+        }
+        *
+        {
+            margin: 0px;
+        }
+    </style>
+
+    {% block title %}
+    <title>Home Page</title>
+    {% endblock %}
+</head>
+<body>
+    <center>
+    
+        {% block body_block %}
+        {% if username %}
+
+        <h1 id="c">Welcome to Home page {{username}}</h1>
+
+        {% else %}
+
+    <center><h1 id="k">Welcome to Home page</h1></center>
+        {% endif %}
+
+        {% endblock %}
+    </center>
+    
+</body>
+</html>
